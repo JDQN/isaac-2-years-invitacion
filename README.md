@@ -49,11 +49,11 @@ Detalles de comportamiento:
 ├── assets/
 │   ├── img/              Dinosaurios, sobre, portada, hojas, huevos, huellas (WebP)
 │   ├── musica.mp3        Canción de fondo
-│   └── social.jpg        Imagen de vista previa al compartir el enlace (1200×630)
+│   └── social-dic.jpg      Imagen de vista previa al compartir el enlace (1200×630)
 ├── vendor/               GSAP, ScrollTrigger y tipografías locales
 ├── apps-script/
 │   └── google-apps-script.gs   Código que guarda las confirmaciones en Google Sheets
-└── social.html           Plantilla para regenerar social.jpg (no se publica)
+└── social.html           Plantilla para regenerar la imagen social (no se publica)
 ```
 
 ---
@@ -130,7 +130,7 @@ Las respuestas se guardan en una hoja de cálculo mediante Google Apps Script. E
 
 1. Sube este repositorio a GitHub (privado).
 2. En [vercel.com](https://vercel.com), **Add New → Project**, elige el repositorio y pulsa **Deploy**. No hace falta ningún ajuste de build.
-3. **Vista previa al compartir (WhatsApp, etc.):** las etiquetas `og:` de `index.html` ya apuntan a la dirección completa de la imagen (`https://isaac-2-years-invitacion.vercel.app/assets/social.jpg`). Si cambias de dominio, actualiza `og:url`, `og:image`, `og:image:secure_url` y `twitter:image`. La imagen debe ser pública y de menos de 300 KB (`social.jpg` pesa unos 73 KB). Para regenerarla, usa `social.html`.
+3. **Vista previa al compartir (WhatsApp, etc.):** las etiquetas `og:` de `index.html` ya apuntan a la dirección completa de la imagen (`https://isaac-2-years-invitacion.vercel.app/assets/social-dic.jpg`). Si cambias de dominio, actualiza `og:url`, `og:image`, `og:image:secure_url` y `twitter:image`. La imagen debe ser pública y de menos de 300 KB (`social-dic.jpg` pesa unos 73 KB). Para regenerarla, usa `social.html`.
    - WhatsApp guarda la vista previa de cada enlace. Si ya compartiste el enlace antes de corregirla, comparte `…vercel.app/?v=2` o vuelve a leerlo en el [Depurador de Facebook](https://developers.facebook.com/tools/debug/) (botón *Scrape Again*).
 4. Haz una confirmación de prueba y borra esa fila de la hoja antes de enviar la invitación.
 
