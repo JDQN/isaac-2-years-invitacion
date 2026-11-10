@@ -7,7 +7,7 @@ window.INVITE = {
   },
 
   // Fecha y hora de llegada, con desfase de Colombia (UTC-5, sin horario de verano).
-  date: "2026-11-28T17:00:00-05:00",
+  date: "2026-12-05T18:00:00-05:00",
   timeZone: "America/Bogota",
   // Duración supuesta de la fiesta (solo se usa para el archivo de calendario).
   durationHours: 4,
@@ -25,8 +25,8 @@ window.INVITE = {
   },
 
   rsvp: {
-    // Fecha límite para confirmar (AAAA-MM-DD): domingo 22 de noviembre.
-    deadline: "2026-11-22",
+    // Fecha límite para confirmar (AAAA-MM-DD): martes 1 de diciembre.
+    deadline: "2026-12-01",
     // WhatsApp (ya no se usa en el formulario; se deja por si quieres mostrarlo en otro lugar).
     whatsapp: "573112896676",
     // URL de la aplicación web de Google Apps Script (termina en /exec). Aquí se guardan las respuestas.

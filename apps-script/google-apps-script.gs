@@ -13,7 +13,7 @@
 var HOJA = "Respuestas";
 var HISTORIAL = "Historial";
 var AVISAR_POR_CORREO = true;                 // true = te llega un correo con cada confirmación nueva
-var CIERRE = "2026-11-22T23:59:59-05:00";     // domingo 22 de noviembre, fin del día (hora de Colombia)
+var CIERRE = "2026-12-01T23:59:59-05:00";     // martes 1 de diciembre, fin del día (hora de Colombia)
 var MAX_FILAS = 500;                          // tope de respuestas guardadas
 var MAX_POR_MINUTO = 30;                      // tope de envíos por minuto (todos juntos)
 

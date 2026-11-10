@@ -73,7 +73,7 @@ Abre `http://localhost:5182`. Para probar sin que suene la música, usa `http://
 | Campo | Para qué sirve |
 |---|---|
 | `child` | Nombre, nombre completo y edad. |
-| `date`, `timeZone` | Fecha y hora de llegada, con desfase (`2026-11-28T17:00:00-05:00`). |
+| `date`, `timeZone` | Fecha y hora de llegada, con desfase (`2026-12-05T18:00:00-05:00`). |
 | `durationHours` | Duración supuesta, solo para el archivo de calendario. |
 | `venue` | Nombre del lugar (vacío = no se muestra), nota, dirección, barrio, ciudad y `mapUrl` (opcional). |
 | `rsvp.deadline` | Fecha límite (`AAAA-MM-DD`). Pasado ese día, el formulario desaparece. |
