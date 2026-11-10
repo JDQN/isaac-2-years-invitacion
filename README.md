@@ -130,7 +130,8 @@ Las respuestas se guardan en una hoja de cálculo mediante Google Apps Script. E
 
 1. Sube este repositorio a GitHub (privado).
 2. En [vercel.com](https://vercel.com), **Add New → Project**, elige el repositorio y pulsa **Deploy**. No hace falta ningún ajuste de build.
-3. Con la dirección final (por ejemplo `https://tu-proyecto.vercel.app`), cambia en `index.html` la línea `og:image` por la URL absoluta: `https://tu-proyecto.vercel.app/assets/social.jpg`. Con eso, al compartir el enlace por WhatsApp aparece la tarjeta con la imagen.
+3. **Vista previa al compartir (WhatsApp, etc.):** las etiquetas `og:` de `index.html` ya apuntan a la dirección completa de la imagen (`https://isaac-2-years-invitacion.vercel.app/assets/social.jpg`). Si cambias de dominio, actualiza `og:url`, `og:image`, `og:image:secure_url` y `twitter:image`. La imagen debe ser pública y de menos de 300 KB (`social.jpg` pesa unos 73 KB). Para regenerarla, usa `social.html`.
+   - WhatsApp guarda la vista previa de cada enlace. Si ya compartiste el enlace antes de corregirla, comparte `…vercel.app/?v=2` o vuelve a leerlo en el [Depurador de Facebook](https://developers.facebook.com/tools/debug/) (botón *Scrape Again*).
 4. Haz una confirmación de prueba y borra esa fila de la hoja antes de enviar la invitación.
 
 ---
@@ -179,7 +180,7 @@ Las respuestas se guardan en una hoja de cálculo mediante Google Apps Script. E
 
 - Probada en el navegador de pruebas de escritorio a 360×740, 375×667 y 390×844. **No se ha probado en un iPhone ni en un Android reales**: conviene revisar la música, el gesto de arrastrar para recargar y la fluidez de las animaciones.
 - La política de seguridad (CSP) se probó en un servidor local con las mismas cabeceras; en Vercel debe comprobarse una vez desplegada.
-- Pendiente al publicar: cambiar `og:image` por la URL absoluta y borrar las filas de prueba de la hoja.
+- Pendiente al publicar: borrar las filas de prueba de la hoja y comprobar la vista previa del enlace en WhatsApp.
 
 ## 11. Licencias y créditos
 
