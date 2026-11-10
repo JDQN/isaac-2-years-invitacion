@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Isaac cumple 2 años · Invitación</title>
+  <meta name="description" content="Estás invitado al cumpleaños número 2 de Isaac: una fiesta de dinosaurios. Sábado 28 de noviembre de 2026, 5:00 p. m.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#CDE9F7">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:title" content="Isaac cumple 2 años · ¡Estás cordialmente invitado!">
+  <meta property="og:description" content="Una fiesta de dinosaurios. Sábado 28 de noviembre de 2026, 5:00 p. m.">
+  <!-- TODO: cuando conozcas el dominio, cambia esta línea por la URL absoluta, p. ej. https://tudominio.com/assets/social.jpg -->
+  <meta property="og:image" content="assets/social.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/trex.webp" type="image/webp">
+  <link rel="preload" href="assets/img/sobre-cerrado.webp" as="image" fetchpriority="high">
+  <link rel="preload" href="vendor/fonts/lilita-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="vendor/fonts/fredoka-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="is-locked">
+
+<!-- ============ Apertura: sobre ============ -->
+<div id="intro" class="intro" role="dialog" aria-label="Apertura de la invitación">
+  <div class="intro-frame">
+    <div class="stage" id="stage">
+      <img class="st st-closed" src="assets/img/sobre-cerrado.webp" width="768" height="1376" alt="Un sobre cerrado con sello de cera, con un T-rex y un triceratops bebés en la selva" fetchpriority="high">
+      <img class="st st-open" id="stOpen" src="assets/img/sobre-abierto.webp" width="768" height="1376" alt="" aria-hidden="true">
+      <div class="fx" aria-hidden="true">
+        <i class="cloud cloud--1"></i><i class="cloud cloud--2"></i><i class="cloud cloud--3"></i>
+        <i class="crater"></i>
+        <i class="puff" style="--dx:6%;--d:0s"></i><i class="puff" style="--dx:-4%;--d:1.2s"></i><i class="puff" style="--dx:9%;--d:2.4s"></i>
+        <i class="puff" style="--dx:-8%;--d:3.6s"></i><i class="puff" style="--dx:3%;--d:4.8s"></i>
+      </div>
+      <div class="glow" id="glow" aria-hidden="true"></div>
+      <button type="button" class="seal-btn" id="sealBtn" aria-label="Abrir la invitación"><i class="ring"></i><i class="ring ring--2"></i><i class="ring ring--3"></i></button>
+    </div>
+    <p class="intro-hint" id="hint"><i class="hint-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 20V6M5.500 12.500L12 6l6.500 6.500" fill="none" stroke="currentColor" stroke-width="3.200" stroke-linecap="round" stroke-linejoin="round"/></svg></i><span>Toca el sello para abrir</span></p>
+    <button type="button" class="skip" id="skipBtn">Saltar</button>
+  </div>
+</div>
+
+<canvas id="confetti" class="confetti" aria-hidden="true"></canvas>
+
+<main class="page" id="page">
+
+  <!-- Portada -->
+  <section class="cover" id="inicio" aria-labelledby="coverName">
+    <img class="cover-bg" id="coverBg" src="assets/img/portada.webp" width="768" height="1376" alt="">
+    <div class="cover-mist" aria-hidden="true"></div>
+    <canvas class="sparkles" id="sparkles" aria-hidden="true"></canvas>
+
+    <div class="cover-content">
+      <p class="cv cv-kicker">¡Estás cordialmente invitado!</p>
+      <h1 class="cv cv-name" id="coverName" data-bind="firstName">Isaac</h1>
+      <p class="cv cv-sub">está cumpliendo</p>
+      <p class="cv cv-age" aria-hidden="true"><span data-bind="age">2</span></p>
+      <p class="cv cv-years"><span class="ribbon" data-bind="agesWord">AÑOS</span></p>
+      <figure class="cv cv-verse">
+        <blockquote>Antes que te formase en el vientre te conocí, y antes que nacieses te santifiqué, te di por profeta a las naciones.</blockquote>
+        <figcaption>Jeremías 1:5 · RVR1960</figcaption>
+      </figure>
+    </div>
+
+    <a class="scroll-cue cv" href="#invitacion" aria-label="Desliza para ver la invitación"><span>Desliza</span><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.600" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  </section>
+
+  <!-- Invitación -->
+  <section class="sec sec--cream" id="invitacion" aria-labelledby="invTitle">
+    <img class="leaf leaf--l" src="assets/img/hoja-1.webp" width="527" height="640" alt="" aria-hidden="true">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Una invitación muy especial</p>
+      <h2 class="title" id="invTitle" data-reveal>¡Una fiesta de dinosaurios!</h2>
+      <p class="lead" data-reveal><strong data-bind="fullName">Isaac David Quimbayo Álvarez</strong> cumple <strong data-bind="ageText">2 años</strong> y quiere celebrarlo contigo.</p>
+      <p class="lead lead--soft" data-reveal>Será una celebración sencilla, con mucho amor y en familia. ¡Esperamos contar contigo!</p>
+
+      <div class="tiles" data-reveal>
+        <img class="peek peek--right" src="assets/img/braquiosaurio.webp" width="447" height="640" alt="" data-dino>
+        <div class="tile tile--date">
+          <span class="tile-k" data-bind="weekday">SÁBADO</span>
+          <b class="tile-big" data-bind="day">28</b>
+          <span class="tile-k" data-bind="monthYear">NOVIEMBRE 2026</span>
+        </div>
+        <div class="tile tile--time">
+          <span class="tile-k">Hora de llegada</span>
+          <b class="tile-big tile-big--s" data-bind="timeShort">5:00</b>
+          <span class="tile-k" data-bind="meridiem">P. M.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cuenta atrás -->
+  <section class="sec sec--sky" id="cuenta" aria-labelledby="cdTitle">
+    <img class="peek peek--left" src="assets/img/estegosaurio.webp" width="496" height="640" alt="" data-dino>
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Ya falta poquito</p>
+      <h2 class="title" id="cdTitle" data-reveal>La dino-fiesta comienza en</h2>
+      <div class="countdown" id="countdown" role="timer" aria-label="Cuenta regresiva" data-reveal>
+        <div class="cd cd--a"><span class="cd-n" data-unit="d">0</span><span class="cd-l">Días</span></div>
+        <div class="cd cd--b"><span class="cd-n" data-unit="h">0</span><span class="cd-l">Horas</span></div>
+        <div class="cd cd--c"><span class="cd-n" data-unit="m">0</span><span class="cd-l">Minutos</span></div>
+        <div class="cd cd--d"><span class="cd-n" data-unit="s">0</span><span class="cd-l">Segundos</span></div>
+      </div>
+      <p class="cd-msg" id="cdMsg" hidden></p>
+      <p class="sr-only" id="cdSr" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- Ubicación -->
+  <section class="sec sec--peach" id="lugar" aria-labelledby="locTitle">
+    <img class="peek peek--right" src="assets/img/triceratops.webp" width="446" height="640" alt="" data-dino>
+    <div class="prints" aria-hidden="true">
+      <img src="assets/img/huella-1.webp" alt="" width="211" height="220">
+      <img src="assets/img/huella-2.webp" alt="" width="205" height="220">
+      <img src="assets/img/huella-3.webp" alt="" width="219" height="220">
+      <img src="assets/img/huella-4.webp" alt="" width="210" height="220">
+    </div>
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>¿Dónde es?</p>
+      <h2 class="title" id="locTitle" data-reveal>Sigue las huellas</h2>
+      <div class="place" data-reveal>
+        <p class="place-name" id="placeName" hidden></p>
+        <p class="place-addr" id="placeAddr"></p>
+        <p class="place-note" id="placeNote" hidden></p>
+        <p class="place-when" id="placeWhen"></p>
+        <a class="btn btn--map" id="mapBtn" href="#" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M12 2.5a7 7 0 0 0-7 7c0 5 7 12 7 12s7-7 7-12a7 7 0 0 0-7-7z" fill="currentColor"/><circle cx="12" cy="9.5" r="2.6" fill="#B4532B"/></svg><span>Cómo llegar</span></a>
+        <p class="map-hint">Toca para abrir el mapa y ver el camino</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Confirmación -->
+  <section class="sec sec--lav" id="confirmar" aria-labelledby="rsvpTitle">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>¡Cuéntanos si vienes!</p>
+      <h2 class="title" id="rsvpTitle" data-reveal>Confirma tu asistencia</h2>
+      <p class="lead lead--s" id="rsvpDeadline" data-reveal hidden></p>
+
+      <div class="form-wrap" data-reveal>
+        <img class="egg" id="egg" src="assets/img/bebe-huevo.webp" width="437" height="640" alt="" data-dino>
+        <form class="form" id="rsvpForm" novalidate>
+          <div class="field">
+            <label for="fName">Tu nombre</label>
+            <input id="fName" name="name" type="text" autocomplete="name" required maxlength="80" placeholder="Nombre y apellido">
+            <p class="err" id="eName" role="alert"></p>
+          </div>
+
+          <fieldset class="field">
+            <legend>¿Nos acompañas?</legend>
+            <div class="choices">
+              <label class="choice"><input type="radio" name="att" value="si" required><span>¡Sí, allí estaremos!</span></label>
+              <label class="choice"><input type="radio" name="att" value="no"><span>Esta vez no podré ir</span></label>
+            </div>
+            <p class="err" id="eAtt" role="alert"></p>
+          </fieldset>
+
+          <div id="guestsField">
+            <div class="pair">
+              <div class="field">
+                <label for="fAdults">Adultos <small>(contándote a ti)</small></label>
+                <input id="fAdults" name="adults" type="number" inputmode="numeric" min="1" max="20" step="1" placeholder="Ej. 2">
+              </div>
+              <div class="field">
+                <label for="fKids">Niños <small>(opcional)</small></label>
+                <input id="fKids" name="kids" type="number" inputmode="numeric" min="0" max="20" step="1" placeholder="0">
+              </div>
+            </div>
+            <p class="err" id="eGuests" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label for="fMsg">Escríbele unas palabras a Isaac (opcional)</label>
+            <textarea id="fMsg" name="msg" rows="3" maxlength="400" placeholder="Déjale tu mensaje de corazón para Isaac"></textarea>
+          </div>
+
+          <div class="hp" aria-hidden="true"><label>No llenar<input id="fWeb" type="text" tabindex="-1" autocomplete="off"></label></div>
+          <p class="privacy">Guardaremos tus datos con cariño, solo para organizar la fiesta de Isaac.</p>
+          <button type="submit" class="btn btn--block" id="rsvpBtn">Confirmar asistencia</button>
+          <p class="form-status" id="rsvpStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cierre -->
+  <section class="sec sec--mint sec--end" id="cierre" aria-labelledby="endTitle">
+    <img class="peek peek--center" src="assets/img/trex.webp" width="456" height="640" alt="" data-dino>
+    <img class="leaf leaf--r" src="assets/img/hoja-2.webp" width="424" height="640" alt="" aria-hidden="true">
+    <div class="wrap">
+      <h2 class="title" id="endTitle" data-reveal>¡Te esperamos con mucho cariño!</h2>
+      <p class="lead lead--soft" data-reveal>Será un día lleno de alegría, juegos y sonrisas, y contigo será aún más bonito.</p>
+      <button type="button" class="btn btn--ghost" id="icsBtn" data-reveal>Añadir al calendario</button>
+      <img class="nest" src="assets/img/huevos.webp" width="644" height="640" alt="" data-reveal>
+      <p class="end-sign" data-reveal>Con mucho cariño,<br>la familia de <span data-bind="firstName">Isaac</span> te&nbsp;espera.</p>
+      <button type="button" class="link" id="replayBtn">Ver el sobre otra vez</button>
+    </div>
+    <div class="ground" aria-hidden="true"></div>
+    <canvas class="dust" id="dust" aria-hidden="true"></canvas>
+  </section>
+</main>
+
+<button type="button" class="music" id="musicBtn" aria-label="Pausar música" aria-pressed="true" hidden>
+  <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M9 18V6l10-2v12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6.500" cy="18" r="2.800" fill="currentColor"/><circle cx="16.500" cy="16" r="2.800" fill="currentColor"/></svg>
+  <span class="music-off" aria-hidden="true"></span>
+</button>
+
+<div class="thanks" id="thanks" hidden>
+  <div class="thanks-card" role="dialog" aria-modal="true" aria-labelledby="thanksTitle" aria-describedby="thanksText">
+    <img id="thanksImg" class="thanks-img" src="assets/img/trex.webp" alt="" width="456" height="640">
+    <h3 id="thanksTitle" class="thanks-title"></h3>
+    <p id="thanksText" class="thanks-text"></p>
+    <button type="button" class="btn btn--block" id="thanksClose">Cerrar</button>
+  </div>
+</div>
+
+<script src="config.js"></script>
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
